@@ -24,7 +24,7 @@ namespace LineComparison1
             double powFirst = Math.Pow(x2 - x1, 2);
             double powSecond = Math.Pow(y2 - y1, 2);
             lenghtFirst = Math.Sqrt(powFirst + powSecond);
-            Console.WriteLine("Lenght of First line is " + lenghtFirst);
+            Console.WriteLine(" First line Lenght is " + lenghtFirst);
 
             Console.WriteLine("Second Line");
             Console.WriteLine("Enter Starting point of line x1 and y1 co-ordinate");
@@ -36,13 +36,22 @@ namespace LineComparison1
             double powx = Math.Pow(x2 - x1, 2);
             double powy = Math.Pow(y2 - y1, 2);
             lenghtSecond = Math.Sqrt(powx + powy);
-            Console.WriteLine(" Second line length is" + lenghtSecond);
+            Console.WriteLine("Lenght of Second line is " + lenghtSecond);
 
-            if (lenghtFirst.Equals(lenghtSecond))
-                Console.WriteLine("Two lines are equal");
+            //if (lenghtFirst.Equals(lenghtSecond))
+            //    Console.WriteLine("Two lines are equal");
+            //else
+            //    Console.WriteLine("Lines are not equal");
+
+            int compare = (lenghtFirst.CompareTo(lenghtSecond));
+            if (compare > 0)
+                Console.WriteLine("lenght of first line is greater than second line");
+            else if (compare < 0)
+                Console.WriteLine("lenght of second line is greater than first line");
             else
-                Console.WriteLine("Lines are not equal");
+                Console.WriteLine("Both lines are equal");
             Console.ReadKey();
+
         }
     }
 }
